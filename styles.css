@@ -1,0 +1,625 @@
+/* =============================================
+   LOJA JUSTIN BIEBER — styles.css
+   Tema: Dourado, Preto e Bege (estilo Justice)
+   ============================================= */
+
+/* ---------- VARIÁVEIS DE COR E FONTE ---------- */
+:root {
+  --cor-fundo: #0d0d0d;          /* Preto profundo */
+  --cor-superficie: #1a1a1a;     /* Superfície de cartões */
+  --cor-borda: #2e2e2e;          /* Bordas suaves */
+  --cor-dourado: #c9a84c;        /* Dourado principal */
+  --cor-dourado-claro: #e8c96a;  /* Dourado claro para hover */
+  --cor-texto: #f0ead6;          /* Bege claro para texto */
+  --cor-texto-suave: #9a9080;    /* Texto secundário */
+  --cor-erro: #e05555;           /* Vermelho para erros */
+  --cor-sucesso: #55a868;        /* Verde para sucesso */
+  --fonte-titulo: 'Bebas Neue', sans-serif;
+  --fonte-corpo: 'Barlow', sans-serif;
+  --raio: 10px;
+  --sombra: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --transicao: all 0.3s ease;
+}
+
+/* ---------- RESET E BASE ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Scroll suave ao clicar nos links do menu */
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---------- CONTENTOR GERAL ---------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.site-header {
+  background-color: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;    /* Fica fixo no topo ao fazer scroll */
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-title {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  color: var(--cor-dourado);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Navegação */
+.header-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header-nav a {
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transicao);
+}
+
+.header-nav a:hover {
+  color: var(--cor-dourado);
+}
+
+/* ---------- SECÇÃO HERO ---------- */
+.hero {
+  /* Fundo escuro com gradiente dourado subtil */
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1506 50%, #0d0d0d 100%);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho decorativo no fundo do hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--cor-dourado);
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(3rem, 8vw, 7rem); /* Responsivo: muda com a largura da tela */
+  color: var(--cor-texto);
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--cor-texto-suave);
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: var(--cor-dourado);
+  color: #0d0d0d;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transicao);
+}
+
+.hero-btn:hover {
+  background-color: var(--cor-dourado-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+}
+
+/* ---------- TÍTULOS DE SECÇÃO ---------- */
+.section-title {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  color: var(--cor-dourado);
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+/* ---------- SECÇÃO DE FILTRO ---------- */
+.filter-section {
+  padding: 50px 0 20px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;  /* Em telas pequenas, quebra para linha abaixo */
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-select {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 10px 20px;
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transicao);
+  min-width: 220px;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: var(--cor-dourado);
+  outline: none;
+}
+
+/* ---------- GRELHA DE PRODUTOS ---------- */
+.catalog-section {
+  padding: 40px 0 60px;
+}
+
+/* CSS Grid: 4 colunas em desktop, menos em mobile */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Mensagem "nenhum produto" */
+.no-products {
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 1.1rem;
+  padding: 60px 0;
+}
+
+/* ---------- CARTÃO DE PRODUTO ---------- */
+/*
+  Cada cartão é criado pelo JavaScript dinamicamente.
+  Estas classes são aplicadas pelos elementos gerados no scripts.js.
+*/
+.product-card {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  transition: var(--transicao);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);  /* Sobe 5px ao passar o rato */
+  border-color: var(--cor-dourado);
+  box-shadow: 0 12px 30px rgba(201, 168, 76, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card-body {
+  padding: 20px;
+  flex: 1;              /* Ocupa o espaço restante */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-name {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.product-card-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cor-dourado);
+  margin-bottom: 12px;
+}
+
+.product-card-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cor-dourado-claro);
+  margin-top: auto;     /* Empurra o preço para o fundo do cartão */
+  margin-bottom: 16px;
+}
+
+/* Botão "Ver Detalhes" dentro do cartão */
+.btn-details {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--cor-dourado);
+  border: 1px solid var(--cor-dourado);
+  border-radius: var(--raio);
+  padding: 10px;
+  font-family: var(--fonte-corpo);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.btn-details:hover {
+  background-color: var(--cor-dourado);
+  color: #0d0d0d;
+}
+
+/* ---------- LIGHTBOX ---------- */
+/*
+  O lightbox é um overlay (cobre toda a tela).
+  Começa com display:none e é ativado pelo JavaScript.
+*/
+.lightbox {
+  position: fixed;      /* Fixo na tela, não rola com o conteúdo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.88);  /* Fundo semitransparente */
+  z-index: 999;         /* Acima de tudo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Animação de entrada do lightbox */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-content {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  max-width: 700px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Botão de fechar o lightbox (X) */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.4rem;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transicao);
+}
+
+.close-btn:hover {
+  background-color: var(--cor-erro);
+}
+
+.lightbox-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.lightbox-info {
+  padding: 28px;
+}
+
+.lightbox-title {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  color: var(--cor-dourado);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.lightbox-description {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.lightbox-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cor-dourado-claro);
+}
+
+/* ---------- SECÇÃO DE ENCOMENDA ---------- */
+.order-section {
+  padding: 60px 0;
+  background-color: #111;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.order-card {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.order-desc {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupo de campo (label + input) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cor-texto-suave);
+}
+
+.form-select,
+.form-input {
+  background-color: #0d0d0d;
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 12px 16px;
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  transition: var(--transicao);
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: var(--cor-dourado);
+}
+
+/* Mensagem de erro do formulário */
+.form-error {
+  background-color: rgba(224, 85, 85, 0.1);
+  border: 1px solid var(--cor-erro);
+  color: var(--cor-erro);
+  border-radius: var(--raio);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Botão de calcular */
+.btn-calculate {
+  background-color: var(--cor-dourado);
+  color: #0d0d0d;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.btn-calculate:hover {
+  background-color: var(--cor-dourado-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+}
+
+/* Caixa de resultado do total */
+.total-value {
+  margin-top: 24px;
+  background: linear-gradient(135deg, #1a1506, #2a2008);
+  border: 1px solid var(--cor-dourado);
+  border-radius: var(--raio);
+  padding: 24px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.total-value .total-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cor-texto-suave);
+  margin-bottom: 8px;
+}
+
+.total-value .total-amount {
+  font-family: var(--fonte-titulo);
+  font-size: 2.8rem;
+  color: var(--cor-dourado);
+  letter-spacing: 3px;
+}
+
+.total-value .total-detail {
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+  margin-top: 6px;
+}
+
+/* ---------- RODAPÉ ---------- */
+.site-footer {
+  background-color: #080808;
+  border-top: 1px solid var(--cor-borda);
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--cor-texto-suave);
+  font-size: 0.85rem;
+}
+
+/* =============================================
+   RESPONSIVIDADE — Telas pequenas (mobile)
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* Header em coluna no mobile */
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Hero menor no mobile */
+  .hero {
+    padding: 60px 20px;
+  }
+
+  /* Filtro em coluna no mobile */
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 1 coluna de produtos no mobile */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Lightbox em tela cheia no mobile */
+  .lightbox-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Formulário com padding menor */
+  .order-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-title {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+}

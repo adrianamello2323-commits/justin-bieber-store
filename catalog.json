@@ -1,0 +1,155 @@
+{
+    "categories":[
+        {
+            "id":"Álbum",
+            "name":"Álbum"
+        },
+        {
+            "id":"t-shirts",
+            "name":"t-shirts"
+        },
+        {
+            "id":"Moletom",
+            "name":"moletom"
+        },
+        {
+            "id":"posters",
+            "name":"posters"
+        },
+    {
+        "id":"ingressos",
+        "name":"ingressos"
+    }
+    ],
+    "products":[
+        {
+            "id":1,
+            "name":"t-shirt",
+            "category":"t-shirts",
+            "description":"Edicão limitada.",
+            "price":69.99,
+            "image":"imagens/camiseta1.jpg"
+        },
+        {
+            "id":2,
+            "name":"t-shirt",
+            "category":"t-shirts",
+            "description":"Edicão limitada.",
+            "price":69.99,
+            "image":"imagens/camiseta2.jpg"
+        },
+        {
+            "id":3,
+            "name":"t-shirt",
+            "category":"t-shirts",
+            "description":"Edicão limitada.",
+            "price":69.99,
+            "image":"imagens/camiseta3.jpg"
+        },
+        {
+            "id":4,
+            "name":"t-shirt",
+            "category":"t-shirts",
+            "description":"Edicão limitada.",
+            "price":69.99,
+            "image":"imagens/camisa4rosa.png"
+        },
+        {
+            "id":5,
+            "name":"moletom",
+            "category":"Moletom",
+            "description":"Edicão limitada.",
+            "price":199.99,
+            "image":"imagens/moletom1amarelo.png"
+        },
+        {
+            "id":6,
+            "name":"moletom",
+            "category":"Moletom",
+            "description":"Edicão limitada.",
+            "price":199.99,
+            "image":"imagens/casacorosa.png"
+        },
+        {
+            "id":7,
+            "name":"moletom",
+            "category":"Moletom",
+            "description":"Edicão limitada.",
+            "price":199.99,
+            "image":"imagens/casaco3preto.png"
+        },
+        {
+            "id":8,
+            "name":"posters",
+            "category":"posters",
+            "description":"Edicão limitada.",
+            "price":39.99,
+            "image":"imagens/poster1.jpg"
+        },
+        {
+            "id":9,
+            "name":"posters",
+            "category":"posters",
+            "description":"Edicão limitada.",
+            "price":39.99,
+            "image":"imagens/poster2.jpg"
+        },
+        {
+            "id":10,
+            "name":"posters",
+            "category":"posters",
+            "description":"Edicão limitada.",
+            "price":39.99,
+            "image":"imagens/poster3.jpg"
+        },
+        {
+            "id":11,
+            "name":"ingressos",
+            "category":"ingressos",
+            "description":"Edicão limitada.",
+            "price":599.99,
+            "image":"imagens/tick.jpg"
+        },
+        {
+            "id":12,
+            "name":"believe",
+            "category":"Álbum",
+            "description":"Edicão limitada BELIEVE .",
+            "price":399.99,
+            "image":"imagens/Believe-Album-Image.jpg"
+        },
+         {
+            "id":13,
+            "name":"swag",
+            "category":"Álbum",
+            "description":"Edicão limitada SWAG .",
+            "price":399.99,
+            "image":"imagens/album swag.avif"
+        },
+         {
+            "id":14,
+            "name":"my world",
+            "category":"Álbum",
+            "description":"Edicão limitada MY WORLD .",
+            "price":399.99,
+            "image":"imagens/album my world2.avif"
+        },
+        {
+            "id":15,
+            "name":"my world 2",
+            "category":"Álbum",
+            "description":"Edicão limitada  MY WORLD 2.",
+            "price":399.99,
+            "image":"imagens/album my world2.avif"
+        },
+        {
+            "id":16,
+            "name":"justice",
+            "category":"Álbum",
+            "description":"Edicão limitada  JUSTICE.",
+            "price":399.99,
+            "image":"imagens/album justice.jpg"
+        }
+]
+}
+    
